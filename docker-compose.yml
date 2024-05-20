@@ -1,0 +1,14 @@
+services:
+  jupyterlab:
+    container_name: jupyter-scipy-local
+    image: quay.io/jupyter/scipy-notebook:python-3.11
+    command: start-notebook.py --ServerApp.root_dir=/home/jovyan/work --IdentityProvider.token=''
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./work:/home/jovyan/work
+    environment:
+      # TODO NOT need for latest jupyter image??
+      - JUPYTER_ENABLE_LAB=yes
+    tty: true
+    stdin_open: true
