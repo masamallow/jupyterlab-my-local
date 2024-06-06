@@ -1,7 +1,8 @@
 services:
   jupyterlab:
     container_name: jupyter-scipy-local
-    image: quay.io/jupyter/scipy-notebook:python-3.11
+    build:
+      context: .
     command: start-notebook.py --ServerApp.root_dir=/home/jovyan/work --IdentityProvider.token=''
     ports:
       - "8888:8888"
