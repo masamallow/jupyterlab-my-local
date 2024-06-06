@@ -1,3 +1,4 @@
+name: jupyter-my-local
 services:
   jupyterlab:
     container_name: jupyter-scipy-local
