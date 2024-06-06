@@ -10,7 +10,6 @@ services:
     volumes:
       - ./work:/home/jovyan/work
     environment:
-      # TODO NOT need for latest jupyter image??
       - JUPYTER_ENABLE_LAB=yes
     tty: true
     stdin_open: true
