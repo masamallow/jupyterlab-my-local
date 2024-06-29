@@ -19,5 +19,6 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 USER jovyan
 
 RUN pip install --upgrade pip wheel setuptools
-RUN conda update --all -y \
+RUN conda update -n base -c conda-forge conda \
+	&& conda update --all -y \
 	&& conda clean -i -t -y
