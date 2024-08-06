@@ -22,3 +22,8 @@ RUN pip install --upgrade pip wheel setuptools
 RUN conda update -n base -c conda-forge conda \
 	&& conda update --all -y \
 	&& conda clean -i -t -y
+
+# Not japanize-matplotlib but matplotlib-fontja
+# because japanize-matplotlib does not work with Python 3.12 or later and `conda install` does not work even with Python 3.11 or before.
+# https://github.com/ciffelia/matplotlib-fontja
+RUN conda install conda-forge::matplotlib-fontja
