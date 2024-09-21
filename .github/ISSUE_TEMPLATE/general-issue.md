@@ -1,3 +1,12 @@
+---
+name: General task & issue
+about: Create a general task or issue.
+title: ''
+labels: ''
+assignees: ''
+
+---
+
 ## Description
 
 <!-- Please provide a description of the issue -->
